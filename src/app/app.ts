@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { lorem, random } from 'faker';
-import { of } from 'rxjs';
+
 
 
 @Component({
@@ -10,11 +10,16 @@ import { of } from 'rxjs';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
+
 export class App {
+
+
 
   randomText = lorem.sentence();
   isHidden=false;
   userTyping="";
+
 
   onInput(event:Event):void {
   const input = event.target as HTMLInputElement;
